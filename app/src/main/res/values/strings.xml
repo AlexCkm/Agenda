@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Agenda</string>
+    <string name="Nombre">Nombre</string>
+    <string name="Apellido">Apellido</string>
+    <string name="Email">Email</string>
+    <string name="Telefono">Telefono</string>
+    <string name="Id">Id</string>
+    <string name="Añadir">Añadir</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

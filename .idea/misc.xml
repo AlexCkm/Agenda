@@ -4,10 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidStudioProyect/Agenda/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/AndroidStudioProyect/Agenda/app/src/main/res/layout/fragment_delete.xml" value="0.25" />
         <entry key="..\:/AndroidStudioProyect/Agenda/app/src/main/res/layout/fragment_lista.xml" value="0.358695652173913" />
         <entry key="..\:/AndroidStudioProyect/Agenda/app/src/main/res/layout/fragment_new_contact.xml" value="0.33" />
         <entry key="..\:/AndroidStudioProyect/Agenda/app/src/main/res/layout/fragment_update.xml" value="0.35260416666666666" />
         <entry key="..\:/AndroidStudioProyect/Agenda/app/src/main/res/layout/item_newcontact.xml" value="0.358695652173913" />
+        <entry key="..\:/AndroidStudioProyect/Agenda/app/src/main/res/layout/item_person.xml" value="0.358695652173913" />
         <entry key="..\:/AndroidStudioProyect/Agenda/app/src/main/res/menu/item_bottom.xml" value="0.33" />
       </map>
     </option>

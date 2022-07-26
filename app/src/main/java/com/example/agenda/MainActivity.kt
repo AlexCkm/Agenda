@@ -3,6 +3,10 @@ package com.example.agenda
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.Navigation
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.agenda.Recycler.Adapter.Adapter.ContactAdapter
+import com.example.agenda.Recycler.Adapter.ContactProvider
 import com.example.agenda.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -38,4 +42,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
+
 }

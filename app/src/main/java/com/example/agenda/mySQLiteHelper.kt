@@ -33,6 +33,8 @@ class mySQLiteHelper(context: Context) : SQLiteOpenHelper(context, "AddressBook.
         val data = ContentValues()
         data.put("name", name)
         data.put("email", email)
+        data.put("telefono", email)
+        data.put("email", email)
         // Abro la DB en modo ESCRITURA
         val db = this.writableDatabase
         db.insert("friends", null,data)

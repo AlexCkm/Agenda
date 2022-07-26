@@ -33,7 +33,7 @@ class NewContactFragment : Fragment() {
                 binding.etApellidos.text.isNotBlank() &&
                 binding.etEmail.text.isNotBlank()&&
                     binding.etTelefono.text.isNotBlank()){
-                friendsDBHelper.updateData(binding.etNombre.text.toString(),
+                friendsDBHelper.updateData(binding.etNombre.text.toString().toInt(),
                     binding.etApellidos.text.toString(),
                     binding.etEmail.text.toString(),
                     binding.etTelefono.text.toString())

@@ -33,7 +33,7 @@ class NewContactFragment : Fragment() {
                 binding.etApellidos.text.isNotBlank() &&
                 binding.etEmail.text.isNotBlank()&&
                     binding.etTelefono.text.isNotBlank()){
-                friendsDBHelper.updateData(binding.etNombre.text.toString().toInt(),
+                friendsDBHelper.addData(binding.etNombre.text.toString(),
                     binding.etApellidos.text.toString(),
                     binding.etEmail.text.toString(),
                     binding.etTelefono.text.toString())
@@ -42,7 +42,7 @@ class NewContactFragment : Fragment() {
                 binding.etEmail.text.clear()
                 binding.etTelefono.text.clear()
 
-                toast("¡Modificado!")
+                toast("¡Guardado!")
 
             } else {
                 toast("No permitido campos vacíos", Toast.LENGTH_LONG)

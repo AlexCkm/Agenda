@@ -7,5 +7,7 @@
     <string name="Id">Id</string>
     <string name="Añadir">Añadir</string>
     <string name="ADD">ADD</string>
+    <string name="UPdate">UPdate</string>
+    <string name="Delete">Delete</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

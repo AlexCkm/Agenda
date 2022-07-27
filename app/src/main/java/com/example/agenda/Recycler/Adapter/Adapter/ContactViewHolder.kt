@@ -9,6 +9,7 @@ import com.example.agenda.databinding.ItemPersonBinding
 class ContactViewHolder (view: View): RecyclerView.ViewHolder(view) {
     val binding = ItemPersonBinding.bind(view)
     fun render(persons: Contact){
+        binding.tvId.text = persons.id
         binding.tvName.text = persons.Nombre
         binding.tvApellidos.text = persons.Apellidos
         binding.tvEmail.text = persons.Email

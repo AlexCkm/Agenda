@@ -1,5 +1,6 @@
 package com.example.agenda
 
+import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -18,6 +19,7 @@ class UpdateFragment : Fragment() {
     private val binding get() = _binding!!
     private lateinit var friendsDBHelper : mySQLiteHelper
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -28,6 +30,7 @@ class UpdateFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val opSelection = arrayOf("")
 
         friendsDBHelper = mySQLiteHelper(this.requireContext())
         binding.btnUpdate.setOnClickListener {
@@ -53,10 +56,23 @@ class UpdateFragment : Fragment() {
             } else {
                 toast("No permitido campos vacíos", Toast.LENGTH_LONG)
             }
+
+            GetSpinner(this.requireContext(),binding.spinnerUPdate, opSelection, SQliteToArray()) //Esta es la array
         }
+
     }
-//    fun hideKeyBoard() {
-//        val imm = getSystemService(AppCompatActivity.INPUT_METHOD_SERVICE) as InputMethodManager
-//        imm.hideSoftInputFromWindow(binding.constraint.windowToken, 0)
-//    }
+
+    fun SQliteToArray():Array<String>{
+        val SQ = arrayListOf<String>()
+        val db : SQLiteDatabase = friendsDBHelper.readableDatabase
+        val cursor = db.rawQuery(
+            "SELECT * FROM ${mySQLiteHelper.TABLE_NAME}", null)
+        if (cursor.moveToFirst()){
+            do {
+                SQ.add(cursor.getInt(0).toString()+ ": " + cursor.getString(1)+ ": " +cursor.getString(2))
+            }while (cursor.moveToNext())
+        }
+        cursor.close()
+        return SQ.toTypedArray()
+    }
 }
